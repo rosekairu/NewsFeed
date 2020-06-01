@@ -1,27 +1,28 @@
-from flask import render_template,request,redirect,url_for
+from flask import render_template,redirect,url_for,request
 from . import main
-from ..requests import get_source, get_article
+from ..models import Sources
+from ..requests import get_sources, get_articles
 
-
-@main.route("/")
+#views
+@main.route('/')
 def index():
-    '''
-    View root page function that returns the index page and its data
-    '''
-    entertainment = get_source('entertainment')
-    business = get_source('business')
-    general = get_source('general')
-    health = get_source('health')
-    science = get_source('science')
-    sports = get_source('sports')
-    technology = get_source('technology')
+	'''
+	view root page function that returns the index the page and its data
+	'''
+	sources = get_sources('business')
+	sports_sources = get_sources('sports')
+	technology_sources = get_sources('technology')
+	entertainment_sources = get_sources('entertainment')
+	title = "News Highlighter"
 
-    
-    title="Home-Welcome to NEWS sources Website"
-    return render_template('index.html', entertainment = entertainment, business = business, general = general, health = health, science = science, sports =sports, technology = technology, title = title)
+	return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
 
+@main.route('/sources/<id>')
+def articles(id):
+	'''
+	view articles page
+	'''
+	articles = get_articles(id)
+	title = f'NH | {id}'
 
-@main.route('/source/<id>')
-def get_articles(id):
-    articles = get_article(id)
-    return render_template('articles.html', articles = articles)
+	return render_template('articles.html',title= title,articles = articles)

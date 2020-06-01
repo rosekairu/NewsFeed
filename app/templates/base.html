@@ -1,39 +1,4 @@
-{% extends "bootstrap/base.html"%}
-
 <!--navbar-->
-{%block navbar%} {%include 'navbar.html'%} {%endblock%}
-
-<!--content block-->
-{%block content %}
-
-<!--styles block-->
-{%block styles%}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-<link rel="icon" href="/static/img/bg2.jpg">
-<!--end styles block-->
-{%endblock styles%}
-
-<div id="head" class="bg">
-    <div class="overlay">
-        <br><br><br>
-        <h1>NewsFeed</h1>
-        <h2>Access Top News from All over the World</h2>
-
-    </div>
-</div>
-
-
-<!--end content block-->
-{%endblock content%}
-
-
-<!--block scripts-->
-{%block script%}
-<script src="{{ url_for('static', filename='js/bootstrap.js')}}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}"></script>
-{%endblock script%}
-
-<!--footer block-->
-{%block footer%} {% include "footer.html"%} {%endblock%}
+{% extends 'bootstrap/base.html'%}
+<!-- Navbar block  -->
+{% block navbar %} {% include 'navbar.html' %} {% endblock %}

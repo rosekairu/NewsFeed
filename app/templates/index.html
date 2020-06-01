@@ -1,79 +1,25 @@
-{% extends "base.html" %} {%import 'macros.html' as macro%} {% block content %} {%block script%}
-<script src="{{ url_for('static', filename='js/bootstrap.js')}}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}"></script>
+{% extends 'base.html'%} {% import 'macros.html' as macro %} {% block content%}
+<div class="container">
+    <!-- Business News Section  -->
+    <h3> Top Business News Sources</h3>
+    <hr> {{ macro.displaySourceList(sources)}}
 
-{%endblock%}
+    <!-- Business News Section  -->
 
-<div id="head" class="bg">
-    <div class="overlay">
-        <br><br><br>
-        <h1>NewsFeed</h1>
-        <h2>Access Top News from All over the World</h2>
-    </div>
+    <h3> Top Technology News Sources</h3>
+    <hr> {{ macro.displaySourceList(technology_sources)}}
+
+    <!-- Entertainment News Section  -->
+
+    <h3> Top Entertainment News Sources</h3>
+    <hr> {{ macro.displaySourceList(entertainment_sources)}}
+
+    <!-- Entertainment News Section  -->
+
+    <h3> Top Sports News Sources</h3>
+    <hr> {{ macro.displaySourceList(sports_sources)}}
+
 </div>
 
-<div class="col-9">
-    <h2 align="center"> TOP HEADLINE NEWS </h2>
-    <div class="container">
-        <div class="row">
-            <div id="business" class="col-md-4">
-                <!-- Business News -->
-                <h3> Business News</h3>
-                <ul>
-                    {{ macro.displaySource(business)}}
-                </ul>
-            </div>
-            <div id="general" class="col-md-4">
-                <!-- General News -->
-                <h3> General News</h3>
-                <ul>
-                    {{ macro.displaySource(general)}}
-                </ul>
-            </div>
-            <div id="technology" class="col-md-4">
-                <!-- Technology News -->
-                <h3> Technology News</h3>
-                <ul>
-                    {{ macro.displaySource(technology)}}
-                </ul>
-            </div>
 
-        </div>
-        <div class="row">
-            <div id="science" class="col-md-4">
-                <!-- Science News -->
-                <h3> Science News</h3>
-                <ul>
-                    {{ macro.displaySource(science)}}
-                </ul>
-            </div>
-            <div id="sports" class="col-md-4">
-                <!-- Sports News -->
-                <h3> Sports News</h3>
-                <ul>
-                    {{ macro.displaySource(sports)}}
-                </ul>
-            </div>
-            <div id="health" class="col-md-4">
-                <!-- Health News -->
-                <h3> Health News</h3>
-                <ul>
-                    {{ macro.displaySource(health)}}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer class="page-footer font-small bg-dark pt-4">
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://github.com/rosekairu"> Rose Kairu</a>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
-
-
-    {%endblock%}
+{%endblock%}

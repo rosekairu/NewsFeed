@@ -1,36 +1,18 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/"><i class="fas fa-newspaper"></i>NewsFeed</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"> NewsFeed </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+        </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/"><button type="button" class="btn btn-outline-info btn-sm">HOME</button> <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/{{'categories/Business'}}"><button type="button" class="btn btn-outline-info btn-sm">BUSINESS</button></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/{{'categories/Technology'}}"><button type="button" class="btn btn-outline-info btn-sm">TECHNOLOGY</button></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/{{'categories/Sports'}}"><button type="button" class="btn btn-outline-info btn-sm">SPORTS</button></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/{{'categories/Entertainment'}}"><button type="button" class="btn btn-outline-info btn-sm">ENTERTAINMENT</button></a>
-            </li>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/comingsoon">Search Article</a>
-                <a class="dropdown-item" target="_blank" href="https://edition.cnn.com/">Visit CNN</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" target="_blank" href="https://www.bbc.com/">Visit BBC</a>
-            </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button id="sources" class="btn btn-outline-success my-2 my-sm-0" type="button">View Top Sources</button>
-        </form>
     </div>
-</nav>
+</div>
