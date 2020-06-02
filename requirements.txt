@@ -11,7 +11,7 @@ clipboard==0.0.4
 cryptography==2.1.4
 
 
-distro-info===0.18ubuntu0.18.04.1
+
 dominate==2.5.1
 Flask==1.1.2
 Flask-Bootstrap==3.3.7.1
