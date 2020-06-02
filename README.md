@@ -24,12 +24,11 @@ NO known bugs as at the moment. Please reach to us if you see any.
 
 | __Behavior__  | __Input example__ | __Output example__ |
 | ------------- | ----------------- | ------------------ |
-| The user should be able to view different news sources on home page  | command   | cnn,bbc,aljezeera |
-| The application should give the user ability to select a news source |bbc | bbc news website |
-| The application should provide a link to various news website | NY times | https://nytime.org |
-| The user should see all articles available on different news source  | BBC | bbc 20+ article |
-| The application should give the user the dates when different article were Published | Trump Vows | 20-10-2019 |
-| The application should have an error pages incase a user is misdirected   | domain/news/ | whoops error |
+| The application gives the user ability to select a news source |bbc | bbc news website |
+| The application provides a link to various news website | NY times | https://nytime.org |
+| The user sees all articles available on different news source  | BBC | bbc 20+ article |
+| The application gives the user the dates when different article were Published | Trump Vows | 20-10-2019 |
+| The application has an error pages incase a user is misdirected   | domain/news/ | whoops error |
 
 
 ## Technologies Used
